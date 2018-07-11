@@ -2,12 +2,13 @@
 
 Selectors are what let us specify (or select) the parts of the page which a set of style declarations will apply to.
 
-So far we've only specified tag names as selectors.  
-This is useful because it means the styles will be applied to every one of those elements.  
-But sometimes you only want to a set of rules to apply to specific elements.  
+So far we've only specified tag names as selectors.
+This is useful because it means the styles will be applied to every one of those elements.
+But sometimes you only want to a set of rules to apply to specific elements.
 We do this with different types of selectors.
 
-Let's make our site title ("Tiny Cakes!") hot pink.  It was a `<h1>` so add the follwoing to our stylesheet:
+Let's make our site title ("Tiny Cakes!") hot pink.
+It was a `<h1>` so add the following to our stylesheet:
 
 ```css
 h1 {
@@ -19,7 +20,7 @@ Refresh the homepage and it should look how we want it it.
 
 [SCREENSHOT]
 
-But then if you look on the recipe pages the recipe titles are also hot pink and we don't want that.  
+But then if you look on the recipe pages the recipe titles are also hot pink and we don't want that.
 So what do we do?
 
 There are two attributes that we can add to any element to allow us to apply styles more specifically: `class` and `id`.
@@ -48,7 +49,7 @@ Now only the `<h1>` with the id of `sitetitle` should be hot pink.  The ones on 
 
 That's better, no how about the headings on the recipe pages for ingredients etc?  Lets fancy them up a bit.
 
-First, update the ingredients, method, and variations headings to have the recipepart class like this:
+First, update the ingredients, method, and variations headings to have the `recipepart` class like this:
 
 ```html
 <h2 class="recipepart">Ingredients:</h2>
@@ -78,8 +79,8 @@ So what did we do here?
 3. Changed the left border specifically to be 10px thick and the color `grey`
 4. Set the padding so it looks nicer.
 
-When we set the padding, we supplied four values at once.  
-You can do this with `padding` and `margin`.  
+When we set the padding, we supplied four values at once.
+You can do this with `padding` and `margin`.
 There are four different ways you can supply values to these properties:
 
 1. One value gets applies to all four sides.  
@@ -94,13 +95,13 @@ There are also four extra properties for `padding` and `margin` for each side of
 
 You could also use these individually to set a side when the style should only affect one.
 
-We also set the border twice here.  
-We did this because we wanted three sides to be the same, but the left one different.  
-We could have set all four sides individually, but this is shorter.  
+We also set the border twice here.
+We did this because we wanted three sides to be the same, but the left one different.
+We could have set all four sides individually, but this is shorter.
 This works because the order of style declarations matters.
 If you reverse the order of those two lines, the `border-left` declaration gets overwritten by the `border` one.
 
-So that looks cool but a bit "grey".  
+So that looks cool but a bit "grey".
 Lets make the thicker left border a different colour for each them.
 
 Elements can have more than one class, you just need to put a space between them.
@@ -133,7 +134,7 @@ h2.variations {
 
 [SCREENSHOT]
 
-CSS lets us write multiple different styles whose selectors overlap.  
+CSS lets us write multiple different styles whose selectors overlap.
 This lets us apply a set of styles to multiple elements, and then additional styles individually.
 This is much nicer than having to write all of those styles out for each.
 
