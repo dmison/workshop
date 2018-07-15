@@ -1,20 +1,19 @@
 Ok now that our homepage is looking better lets get our recipe pages looking nice.
 
-Lets do `traditional-cupcakes.html` first.
+Let's do `traditional-cupcakes.html` first.
 
 Instead of showing you the completed page I'm going to provide some direction and let you figure out the right markup.
 
-1. The document title should be `Traditional Cupcakes`
-1. `Traditional Cupcakes` in the first line should be a level 1 heading.  Remove the line of `-`
-2. Before the level 1 header, put a link back to our `index.html` with the text of `HOME`
+1. The document title should be `Traditional Cupcakes`.
+1. `Traditional Cupcakes` in the first line should be a level 1 heading.  Remove the line of `-`.
+2. Before the level 1 heading, put a link back to our `index.html` with the text of `HOME`.
 2. Description should be a paragraph.
-3. Make `Ingredients:` a level 2 heading the ingredients should be in an unordered list.
-4. `Method:` should also be a level 2 heading.
-5. The method directions should be an ordered list.
+3. Make `Ingredients:` a level 2 heading. The ingredients should be in an unordered list.
+4. `Method:` should be a level 2 heading as well, but the method directions should be an ordered list.
 
-Step 7 of the method is tricky.  You can nest most things inside of list items though, including other lists.  
+Step 7 of the method is trickier, right? The good news is, you can nest most things inside of list items - including other lists.  
 
-They should look something like:
+When you're done, your file should look something like this:
 
 [SCREENSHOT]
 
@@ -141,4 +140,6 @@ Now do `muffins.html` as well.  Use the same directions plus the following:
 </html>
 ```
 
-Ok.  Now we have our three pages: two recipes and a homepage.  But it's a bit plain isn't it?  What about images?  Lets look at them in the next step.
+Ok.  Now we have our three pages: two recipes and a homepage.
+
+But it's a bit plain isn't it?  Most recipe sites have images.  Let's look at them in the next step.
