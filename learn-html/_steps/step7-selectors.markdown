@@ -43,11 +43,11 @@ h1#sitetitle {
 }
 ```
 
-The `#` means what follows in the selector is an `id`.
+The `#` in the selector means what follows the `#` is an `id`.
 
 Now only the `<h1>` with the id of `sitetitle` should be hot pink.  The ones on the recipes pages should be the default black.
 
-That's better, no how about the headings on the recipe pages for ingredients etc?  Lets fancy them up a bit.
+That's better, now how about the headings on the recipe pages for ingredients, etc.?  Let's fancy them up a bit.
 
 First, update the ingredients, method, and variations headings to have the `recipepart` class like this:
 
@@ -85,7 +85,7 @@ There are four different ways you can supply values to these properties:
 
 1. One value gets applies to all four sides.  
 2. For two values, it uses the first one for top and bottom, and the second for left and right.  
-3. For three, the first one is the top, the second is left and right, and the third is the bottom.  
+3. For three, the first one is the top, the second is both left and right, and the third is the bottom.  
 4. And for four, they are used for top, right, bottom, left respectively.
 
 There are also four extra properties for `padding` and `margin` for each side of the element:
