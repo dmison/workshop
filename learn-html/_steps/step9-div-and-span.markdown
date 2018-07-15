@@ -1,4 +1,4 @@
-Ok lets jump back to HTML for a moment and look at two more tags that are really useful with CSS: `<div>` and `<span>`.
+Ok let's jump back to HTML for a moment and look at two more tags that are really useful with CSS: `<div>` and `<span>`.
 
 `<div>` is a general purpose block element which you can use as a container for related content.
 It is most useful to group together content so those elements can be targeted more easily with CSS.
@@ -6,14 +6,14 @@ You can also set borders, padding, margins and colours on `<div>`s themselves.
 
 `<span>` is the inline version of `<div>`.
 
-Lets look at how to use them.
+Let's look at how to use them.
 
 ## Using `<div>`
 
-If you look at our recipe pages, I want the `<h2>`s, the titles for ingredients etc to go right across the white `<body>` area.
+If you look at our recipe pages, I want the `<h2>`s, the titles for ingredients, etc. to go right across the white `<body>` area.
 Unfortunately we can't do that easily because the reason they don't reach right across is because of the padding set on the body element.
 
-Ok so lets update our CSS to set the left and right padding on `<body>` to 0.
+So let's update our CSS to set the left and right padding on `<body>` to 0.
 
 <!-- We could just remove the padding style but we are going to be implementing changes here that assume that it is going to be zero.
 Someone might have a browser that doesn't have a zero value for body padding. -->
@@ -67,7 +67,7 @@ Refresh and now you should see that first part is inset from the edge.
 
 Now add a `<div>` with the class of `container` to each of the ingredients, method and variations.
 
-Eg. for ingredients:
+For example, for ingredients:
 
 ```html
 <h2 class="recipepart ingredients">Ingredients:</h2>
@@ -88,7 +88,7 @@ Update each of them (in both the cupcakes and muffins pages) and we should see o
 
 [SCREENSHOT]
 
-But opps, if we look at our homepage we have a problem because we removed the body padding.  
+But oops, if we look at our homepage we have a problem because we removed the body padding.  
 
 [SCREENSHOT]
 
@@ -117,7 +117,7 @@ Easy to fix, just add `<div>` with class `container` around all the content we w
 
 Much better.
 
-`<div>` basically gives you a general purpose box that you can still any elements in to apply styles to.  It's very useful.
+`<div>` basically gives you a general purpose box that you can put around any elements you want to apply styles to.  It's very useful.
 
 ## Using `<span>`
 
