@@ -36,7 +36,7 @@ Update the image tag as follows to make the size a little more reasonable:
 
 Notice that the image tag doesn't have opening & closing tags.  It just has a `/>` instead of `>` in the tag.  This is called a **self-closing tag**.  There are a few of these in HTML.  Usually they are tags that specify an element of the page that isn't text.  In this case an image.
 
-Before you go to the next step, try to add an appropriate image to each recipe page.  Use Google Images to find and save a photo of cupcakes and one of muffins and add them to the recipe pages.
+Before you go to the next step, try to add an appropriate image to each recipe page.  Use a stock image site like https://www.stockfreeimages.com/ to find and save a photo of cupcakes and one of muffins and add them to the recipe page.
 
 [SCREENSHOT]
 
