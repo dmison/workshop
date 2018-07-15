@@ -1,11 +1,11 @@
-## what are we building?
+## What we're building
 
 So we are going to learn HTML & CSS by creating a simple website.  Just a few pages.
 
 What we are going to do is create a simple recipes site.
 
 
-## What do you need
+## What you need
 
 The best thing about making web pages is that you don't really need very much to get started.
 
