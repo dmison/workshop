@@ -1,8 +1,8 @@
 Our links are pretty plain.
 Just the default underlined blue text which turns purple once you have visited the link.
-Lets make it more inline with our Tiny Cakes! brand.
+Let's make it more inline with our Tiny Cakes! brand.
 
-First lets just change the default appearance of `<a>`:
+First let's just change the default appearance of `<a>`:
 
 ```css
 a {
@@ -84,7 +84,7 @@ We didn't style `:link` here because styling `a` does the same thing for our cas
 
 This order is important because the link styles build on one another, for example the styles in the first rule will apply to all the subsequent ones, and when a link is being activated, it is also being hovered over.  If you put the styles in a different order than you might get weird effects.
 
-Note that these are pretty dramatic changes to link styling.  People are mostly used to the underlined text style so because careful changing it too dramatically as it might confuse and annoy some people.
+Note that these are pretty dramatic changes to link styling.  People are mostly used to the underlined text style so be careful changing it too dramatically. It can confuse and annoy people - and if the change is too dramatic, such as a change in font size that moves the text away from the tip of the mouse cursor, it might actually make your link impossible to click on.
 
 You can learn much more about styling of links at
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links
