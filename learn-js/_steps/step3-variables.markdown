@@ -42,7 +42,7 @@ You can also create and assign in a single statement:
 var message = 'Hello There!';
 ```
 
-Assigning a value at the time of creation is sometime called providing an **intial value** or **initalizing** the variable. 
+Assigning a value at the time of creation is sometime called providing an **initial value** or **initialising** the variable.
 
  <!-- A variable with no value assigned contains the special value `undefined`.  `undefined` is not a string, it is a special type of it's own. -->
 
@@ -61,8 +61,8 @@ That's kind of an academic example though, it doesn't really demonstrate *why* y
 
 Lets' do a better one.
 
-We're going to update the page so it has three buttons, labelled `Arrive`, `Leave`, and `Say`. 
-When you click on `Say` it will display a message that is saved in a variable. 
+We're going to update the page so it has three buttons, labelled `Arrive`, `Leave`, and `Say`.
+When you click on `Say` it will display a message that is saved in a variable.
 Clicking on `Arrive` and `Leave` will change the message that is stored.
 
 Let's update our page like this:
@@ -82,7 +82,7 @@ Let's update our page like this:
   </body>
   <script>
     var message = "I don't know where you are!";
-    
+
     function setArrive(){
       message = 'Welcome!';
     }
@@ -98,20 +98,14 @@ Let's update our page like this:
     document.getElementById('sayButton').onclick = sayStuff;
     document.getElementById('arriveButton').onclick = setArrive;
     document.getElementById('leaveButton').onclick = setLeave;
-    
+
   </script>
 
 </html>
 ```
 
-In our Javascript we have a variable called `message`. 
-`message` is what is displayed when we click on the `Say` button. 
-Clicking on either of the other buttons will assign a different value to `message`. 
+In our Javascript we have a variable called `message`.
+`message` is what is displayed when we click on the `Say` button.
+Clicking on either of the other buttons will assign a different value to `message`.
 
 Before going on to the next step, have a try at adding another button `Stay` which changes the message to `"Well, make yourself comfortable."`
-
-
-
-
-
-

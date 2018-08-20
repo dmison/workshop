@@ -137,33 +137,73 @@ It is generally recommended to use the strict versions of these operators.
 
 ## Logical Operators
 
-There is also a set of **logical operators**, which you can use when you need to test multiple things as a single condition.
+So that lets us compare two things.  But what if you have more complicated conditions you need to evaluate?
+To do this we use **logical operators**.
 
-The most commonly used logical operators are: **NOT** (`!`), **AND** (`&&`), and **OR** (`||`).
+There are three primary logical operators you will encounter: `&&`, `||` and `!`.
 
-### The AND operator `&&`
-The AND operator, `&&`, is used when multiple conditions must all be `true`.  
+### The **AND** operator `&&`
 
-Here, `name` would be the string they typed in, and `tickedAgree` is a boolean (`true` or `false`) as to whether they ticked a checkbox.
+`&&` is the **AND** operator and is used when you have multiple conditions that you need to be true.
 
-```Javascript
-if(name !== '' && tickedAgree){
+```javascript
+if (age >= 18 && agreedToTerms) {
 
 }
 ```
 
-You can add as many conditions as you want with `&&` and it will check each one in turn until it finds one that is false at which point it considers the whole expression false.
+You can chain together as many conditions as you need with `&&`.  It evaluates each from left to right and as soon as it encounters one that is `false` it considers the entire expression to be `false`.  Otherwise the expression is `true`.
 
-Note that you can test boolean variables or values into conditions without having to use `=== true` because they already are true or false.
+### The **OR** operator `||`
 
+`||` is the **OR** operator and is used when you have multiple conditions but only one of them needs to be true.
 
-### The OR operator `||`
+```javascript
+if (age >= 18 || parentSignedForm) {
 
-The NOT operator, `!`, is used to reverse a boolean value.  It turns something that is `true` into `false` and vice versa.  To use it you prefix the variable or before a parentheses you want to reverse.
+}
+```
 
+Like `&&` you can chain together as many conditions as you like with `||`. It also evaluates them left to right but as soon as it finds one that is `true` it considers the whole expression to be `true`.
 
-### The NOT operator `!`
+### The **NOT** operator `!`
 
-All of this is related to a special field of mathematics called [boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra).
-You don't need to be an expert on boolean algebra to be a programmer, but it is an interesting area.
-Learning a little bit about the basics can help you in the long term, but don't lose any sleep over it now.
+Unlike `&&` and `||` the **NOT** operator `!` is placed in front of an expression to reverse it.
+
+```Javascript
+if(!agreedToTerms){
+
+}
+```
+
+This is useful for those situations where you want to respond to things not being done, or going wrong.
+
+### Grouping conditions
+
+You can also mix `&&` and `||` but it can get very confusing.  You can use parentheses to group conditions together to ensure they are evaluated how you expect.
+
+Let's say we have a form where:
+
+ * applicants have to specify their age (`age` number),
+ * and agree to the terms and conditions (`agreedToTerms` boolean).
+ * But if they aren't eighteen or over they have to get a parent to sign a form (`parentSignedForm` boolean).
+
+The following `if` statement doesn't quite work as expected.
+
+```Javascript
+if (age >= 18 || parentSignedForm && agreedToTerms) {
+
+}
+```
+
+If `age >= 18` is true, then when the `||` is encountered, Javascript thinks it doesn't have to evaluate any further.  Clearly not what we intended.
+
+To clarify where we want the `&&` and `||` to apply we use parentheses:
+
+```javascript
+if ( (age >= 18 || parentSignedForm) && agreedToTerms) {
+
+}
+```
+
+You can also put `!` before a group to reverse it's outcome too.

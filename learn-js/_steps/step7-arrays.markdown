@@ -3,7 +3,9 @@ layout: step
 number: 4
 title: Array
 permalink: step4/
-
+requires:
+  - objects
+  
 # keywords:
 #  - term: package.json
 #    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
@@ -11,10 +13,8 @@ permalink: step4/
 ---
 
 Arrays are special type of object which contains an ordered list of values.
-
-Arrays also have a bunch of properties that expose information about the list it has as well as functions to let you easily manipulate that list.
-
 We often end up having to keep lists so arrays are really useful.  
+
 
 You can create an array like this:
 
@@ -76,3 +76,6 @@ var cats = [
 ```
 
 It almost always make sense to only use a single type in an array.
+
+
+Arrays also have a bunch of properties that expose information about the list it has as well as functions to let you easily manipulate that list.
