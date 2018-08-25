@@ -65,7 +65,7 @@ We're going to update the page so it has three buttons, labelled `Arrive`, `Leav
 When you click on `Say` it will display a message that is saved in a variable.
 Clicking on `Arrive` and `Leave` will change the message that is stored.
 
-Let's update our page like this:
+Let's create another page like this:
 
 ```html
 <!DOCTYPE html>

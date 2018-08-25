@@ -14,7 +14,7 @@ At lot of beginning workshops for Javascript start you with the very basics and 
 
 That's kind of boring, so we want to jump right in with the fun stuff.
 
-So what we are going to do is create a simple page that has a button and a box.
+So lets get started with a simple page that has a button and a box.
 
 Then we are going to write some code that will make changes to the box when you click the button.
 
@@ -22,7 +22,7 @@ I'll describe what all of this does, and then in the following steps we will exp
 
 Ready?  Lets go!
 
-Create a new HTML file, call it whatever you want just so long as it has `.html` at the end, then add the following HTML & Javascript to it.
+Create a new HTML file, call it whatever you want just so long as it has `.html` at the end, then add the following to it:
 
 ```html
 <!DOCTYPE html>
@@ -55,15 +55,20 @@ Now click on the button and you will see the text 'You clicked the button!' adde
 
 So what just happened here?
 
+The file is mostly straight forward HTML.
+
 When the page loads in the browser, the browser reads the HTML file, and draws the HTML elements as it finds them in the file.  
 
-Until it hits the `<script>` tag.  When that happens it pauses drawing the page and runs the instructions in the `<script>` tag.  Once it finishes that it continues drawing whatever page elements it finds after `<script>`.  That's the first way a browser runs Javascript code, when it finds a `<script>` tag when loading the page.
+Until it hits the `<script>` tag.
+When that happens it pauses drawing the page and runs the instructions in the `<script>` tag.
+Once it finishes that it continues drawing whatever page elements it finds after `<script>`.
+That's the first way a browser runs Javascript code, when it finds a `<script>` tag when loading the page.
 
 What happens in our `<script>` tag?
 
 We did two things.  
 
-First, it created a function which we named `doStuff`.  That function gets the element on the page with the ID of `displayBox` and set the text in that element to be `You clicked the button!`.  `document` and `getElementById` are parts of the DOM API.  A function is a way of creating a chunk of code to run later.
+First, it created a function which we named `doStuff`.  That function gets the element on the page with the ID of `displayBox` and set the text in that element to be `You clicked the button!`.  `document` and `getElementById` are parts of the DOM API.  A function is a way of creating some code to run later.
 
 Then, it found the element with the element with the ID of `actionButton` and told the browser that when that element gets clicked on it should run the function `doStuff`.
 
@@ -77,7 +82,7 @@ Almost everything that happens in the browser triggers an event. Think of an eve
 
 When we write Javascript, we tell the browser what instructions (functions) to run when different events happen.
 
-So now we have something to work with lets dig into the basics of Javascript
+So now we have something to work with lets dig into the basics of Javascript.
 
 <!-- ## Script placement
 
