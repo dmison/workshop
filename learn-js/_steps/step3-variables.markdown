@@ -83,11 +83,11 @@ Let's update our page so it looks like this:
   <script>
     var message = "I don't know where you are!";
 
-    function setArrive(){
+    function handleArrive(){
       message = 'Welcome!';
     }
 
-    function setLeave(){
+    function handleLeave(){
       message = 'Farewell my friend!';
     }
 
@@ -96,8 +96,8 @@ Let's update our page so it looks like this:
     }
 
     document.getElementById('sayButton').onclick = sayStuff;
-    document.getElementById('arriveButton').onclick = setArrive;
-    document.getElementById('leaveButton').onclick = setLeave;
+    document.getElementById('arriveButton').onclick = handleArrive;
+    document.getElementById('leaveButton').onclick = handleLeave;
 
   </script>
 
