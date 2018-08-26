@@ -11,7 +11,7 @@ permalink: step2/
 ---
 So now we know the basics about values, operations and expressions.
 
-But so far we have only been able to write literal values.  We have needed to know what they will be ahead of time.  What if we don't know yet or if we expect them to change over time?  That's were variables come in.
+But so far we have only been able to write literal values.  We have needed to know what they will be ahead of time.  What if we don't know yet or if we expect them to change over time?  That's where variables come in.
 
 **Variables** are named placeholders that represent a value.
 
@@ -30,7 +30,7 @@ Variable names:
  * are case sensitive (`message` and `Message` are different variables)
  * cannot be reserved words (eg. `var`)
 
-Once you have created a variable, you **assign** a value to it using the **assignment operator** `=`
+Once you have created a variable, you **assign** a value to it using the **assignment operator** `=`.
 
 ```javascript
 message = 'Hello There!';
@@ -42,7 +42,7 @@ You can also create and assign in a single statement:
 var message = 'Hello There!';
 ```
 
-Assigning a value at the time of creation is sometime called providing an **initial value** or **initialising** the variable.
+Assigning a value at the time of creation is sometimes called providing an **initial value** or **initialising** the variable.
 
  <!-- A variable with no value assigned contains the special value `undefined`.  `undefined` is not a string, it is a special type of it's own. -->
 
@@ -59,13 +59,13 @@ function doStuff(){
 
 That's kind of an academic example though, it doesn't really demonstrate *why* you use variables.
 
-Lets' do a better one.
+Let's do a better one.
 
 We're going to update the page so it has three buttons, labelled `Arrive`, `Leave`, and `Say`.
 When you click on `Say` it will display a message that is saved in a variable.
 Clicking on `Arrive` and `Leave` will change the message that is stored.
 
-Let's update our page like this:
+Let's update our page so it looks like this:
 
 ```html
 <!DOCTYPE html>
@@ -104,7 +104,7 @@ Let's update our page like this:
 </html>
 ```
 
-In our Javascript we have a variable called `message`.
+In our JavaScript we have a variable called `message`.
 `message` is what is displayed when we click on the `Say` button.
 Clicking on either of the other buttons will assign a different value to `message`.
 
