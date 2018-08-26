@@ -10,7 +10,7 @@ permalink: step5/
 
 ---
 
-We don't always want our programs to perform the exact some series of steps every time.
+We don't always want our programs to perform the exact same series of steps every time.
 Often we want different actions to occur based on user input or other information.
 
 We refer to this as our code having **branches** or more than one **path**.
@@ -30,7 +30,7 @@ if(firstName == ''){
 There are two basic parts to an `if`:
 
  * the condition in parentheses, which is the question being asked
- * and the code block in braces, which is what to do if the answer to the question is yes.
+ * the code block in braces, which is what to do if the answer to the question is yes.
 
 Optionally you can add an `else` and another code block to be run if the condition is not met.
 
@@ -52,9 +52,9 @@ First update `index.html` to add a box that we can type our name into:
 <input type="text" id="nameInput" placeholder="Type your name here" />
 ```
 
-Now lets's update our javascript so our `setLeave` and `setArrive` functions get what we have typed into the box and include it in the message.
+Now lets's update our JavaScript so our `handleLeave` and `handleArrive` functions get what we have typed into the box and include it in the message.
 
-```Javascript
+```JavaScript
 function handleArrive(){
   var name = document.getElementById('nameInput').value;
   message = 'Welcome '+name+'!';
@@ -100,17 +100,17 @@ function handleLeave(){
 
 Here we are using an else block.
 
-If `name` is an empty string we set `message` to string that does not include `name`.
+If `name` is an empty string we set `message` to a string that does not include `name`.
 
-If `name` is not an empty string then the `else` block will run and it sets `message` to a string with `name` concatenated with `+`.
+If `name` is not an empty string then the `else` block will run and it sets `message` to a string with `name` concatenated into it with `+`.
 
 So now `handleArrive` and `handleLeave` both have two different **paths of execution**.  
 
-(
+<div class="aside">
 `handleArrive` and `handleLeave` do almost exactly the same steps, with subtle differences.  
 You might be wondering if there is a better way to handle this so you aren't writing almost the same code over and over.
 Yes there is, we use functions for that which we will talk about about in the next step.
-)
+</div>
 
 ## Comparison Operators
 
@@ -206,4 +206,4 @@ if ( (age >= 18 || parentSignedForm) && agreedToTerms) {
 }
 ```
 
-You can also put `!` before a group to reverse it's outcome too.
+You can also put `!` before a group to reverse its outcome too.
