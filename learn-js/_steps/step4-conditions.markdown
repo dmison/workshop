@@ -44,9 +44,9 @@ If they aren't equal then the expression is `false`.
 
 ## Using Conditionals
 
-Let's update our code so we can tell the page our name, and it can use that name to address us.
+Let's continue the example from the previous step by updating it so we can tell the page our name, and it can use that name to address us.
 
-First update `index.html` to add a box that we can type our name into:
+First add a box that we can type our name into:
 
 ```html
 <input type="text" id="nameInput" placeholder="Type your name here" />

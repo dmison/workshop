@@ -3,299 +3,257 @@ layout: step
 number: 4
 title: Functions
 permalink: step4/
+requirements:
+  - variables
+  - values, expressions, Operators
+  - conditionals
 
 # keywords:
-#  - term: package.json
-#    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
+#  - term: term
+#    define: A definition.
 
 ---
 
-Functions are a way of taking the big todo list of our program and breaking it up into a series of smaller ones.  It's a little bit like writing lots of tiny program inside of your program (we heard you like programs so we put a program in your program).
+Functions are a way of taking the big todo list of our program and breaking it up into a series of smaller ones.  It's a little bit like writing lots of tiny program inside of your program (we heard you like programs so we put programs in your program).
 
-We do this for a couple of reasons.
+We've been using functions so far to assign behaviour to events, specifically the `onclick` events of our buttons, but that isn't the only place you can use functions.  
 
-1. Smaller programs are much easier to write.
-2. It can make our programs easier to understand.
+Breaking your code up into functions is helpful because it lets us write our big programs as though they were a bunch of little ones instead.
+
+1. Small programs are easier to write than big ones.
+2. It can make our programs easier to read and understand.
 3. It can also save you time by letting you reuse your functions in multiple places.
 
-It's the mechanism that JS uses for assigning behaviour to events.
-So we *have* to use them for that. ;-)
+So lets explore functions by creating a new app that lets us explore functions some more.
 
-We've already written a couple of very simple functions: `handleArrive`, `handleLeave`, and `sayStuff`, and we've made use of one that the browser provided: `getElementById`.
+Specifically the things we are going to investigate about functions are:
 
-However we've only used the functions that we've created to assign behaviour to the `onclick` events of our buttons, and we've avoided a couple of very important features of functions, **parameters** and **return values**.
+ * **declaring**,
+ * **invoking**,
+ * **parameters** and **arguments**,
+ * **return values**
 
-So let's rewrite our program a bit to take advantage of these.
+## Create our HTML
 
----
+Create a new file with the following HTML.
 
-First we'll replace
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learning JS workshop</title>
+  </head>
+  <body>
+    <div style="padding:10px; margin: 15px; border:1px solid grey; background-color:#ffffff">
+      Background: <input id="bgColorInput" name="background" type="color" value="#ffffff"  />
+      Row1: <input id="row1ColorInput" name="row1" type="color" value="#ffffff"  />
+      Row2: <input id="row2ColorInput" name="row2" type="color" value="#ffffff"  />
+    </div>
+    <div id="message"></div>
+    <div id="row1" style="width:100%;height:100px"></div>
+    <div id="row2" style="width:100%;height:100px"></div>
+  </body>
 
-```Javascript
-var status = 'unknown';
+  <script>
+
+  </script>
+
+</html>
 ```
 
-```Javascript
-function makeMessage(name, status){
-  var message = "I don't know here you are!";
+Save it and check it out in your browser.
 
-  if(status === 'arrive'){
-    if(name===''){
-      message = 'Welcome stranger!';
-    }else {
-      message = 'Welcome '+name+'!';
-    }
-  }
+You should see three colour selection elements that when clicked open colour pickers.
+This is done by using `<input>` elements with `type` set to `color`.
 
-  if(status === 'leave'){
-      if(name === ''){
-        message = 'Farewell stranger!';
-      }
-      else {
-        message = 'Farewell '+name+'!';
-      }
-  }
-  return message;
-}
-```
+There are also three `<div>`s with no content.
 
-```Javascript
-function handleArrive(){
-  status = 'arrive';
-}
+Notice how each `<input>` has a name attribute, two of which correspond to the `id`s of the empty `<div>`s and the other `name` is just `'background'`?  We'll use that information later so that when one of the `<input>`s changes colour we know the right thing to update.
 
-function handleLeave(){
-  status = 'leave';
-}
-```
-
-```Javascript
-function handleSay(){
-  var name = document.getElementById('nameInput').value;
-  var message = makeMessage(name, status);
-  document.getElementById('displayBox').innerText = message;
-}
-```
-
-```Javascript
-document.getElementById('sayButton').onclick = handleSay;
-document.getElementById('arriveButton').onclick = handleArrive;
-document.getElementById('leaveButton').onclick = handleLeave;
-```
-
-## Parameters & Arguments.
-
-Functions can be sent explicit values to use when invoked.  We call this **passing arguments**.
-
-This is like having special variables in your function which are initialised with values when the function is invoked.
-
-To pass arguments, simply list the values (or variables) you want to send with commands between them in the parentheses after the when you invoke a function.
-
-To make use of the values passed in, you must define **parameters** when declaring the function.  To define parameters, you list the names with commas between them that you want them to have in the parentheses after the function name.
-
-Example: declaring a function called getFullName that takes two arguments.
-
-```javascript
-function getFullName(firstname, lastname){
-    var fullname = firstname + ' ' + lastname;
-}
-```
-
-Now when you invoke the function you can specify values for those parameters.  We call that **passing arguments**.
-
-```Javascript
-getFullName('Jessica', 'Smith');
-```
-
-**Parameters** and **arguments** are two terms that tend to get used interchangeably.  Everybody mixes them up. :-)
-
-## Returning values
-
-A function can return a value.  
-
-To return a value you use the `return` keyword followed by the value or variable to return.  
-
-When the `return` keyword is encountered in a function, it immediately stops running and flow returns to the caller.
-
-When a function returns a value, you can use the invocation of that function any place where a value is expected.  A little bit like variables.
-
-So let's extend `getFullName` so it **returns** `fullname`.
-
-```Javascript
-function getFullName(firstname, lastname){
-    var fullname = firstname + ' ' + lastname;
-    return fullname;
-}
-```
-
-So now you can use `getFullName()`
-```javascript
-document.getElementById('displayBox').innerText = getFullName('Jessica', 'Smith');
-```
-
-What happens if you don't pass arguments to a function that expects them?  The parameters won't be initialised, just like an uninitialised variable.  They will have the value of `undefined`.
-
-What happens if you pass arguments to a function without declared parameters?  Nothing.
-
-What happens if you pass arguments of a different type than what the function expects?  Depends on the function and what it is doing with them.
-
-TIP: `undefined` evaluates to `false` in a boolean expression.  So you could use this to check if a given parameter was passed a value.
-
-```javascript
-function getFullName(firstName, lastName){
-  // first name only: fname
-  // lastname only: [unknown] LastName
-  // neither: [unknown]
-  var lname = '';
-  var firstname
-  if(!lastName){ lname = '[unknown]'; } else lname = lastName;
-
-
-  if(!firstName){ fName = ''; } else { fName = firstName; }
-  if(!lastName){ lName = ''; } else { lName = lastName; }
-
-  if(!fName && !lastName){
-    fullName = 'Jane/John Doe';
-  } else {
-    fullName = firstName + ' ' + lastName;
-  }
-  return fullName;
-}
-```
-
-## Chaining
-
-
----
-What makes up a function?
-
-* A function usually has a name.  This is a bit like the variable name for the function.  There are cases where a function doesn't have a name, an **anonymous** function.
-* A function can have values passed into it which become variables in the body.  These are called parameters or arguments depending on the context.  People often use these terms interchangeably so don't worry about getting them confused. :-)  
-* The function body is the code that is run when the function is run.
-* A function can **return a value**.  
-
-
-<!-- * elements?
-  * name
-  * parameters
-  * body
-  * return value -->
-
-<!-- 3. syntax for declaring a function -->
-
-<!-- 4. syntax for invoking a function -->
-
----
-
-Function are also how a lot of features are exposed by the browser, like the DOM API.
-
-Functions save you time (write once, use many times) and they help you organise your programs so its easier to understand.
-They make your programs more flexible and easier to change (and fix) in the future.
-
-We've actually created and used functions several times already.
-
-Creating a function is called **declaring** it.
-
-Running a function is called **invoking** or **calling** it.
-
+What we are going to do is add javascript code in our `<script>` tag so that selecting colours will cause the background colour of the page or the divs to update to match.
 
 ## Declaring Functions
 
-There are a couple of different ways of declaring functions, the easiest is with the `function` keyword.
-We've done this already with `setArrive`, `setLeave`, and `sayStuff`.
+Creating a new function is often called **declaring** it.
+
+Let's declare a new function called `handleColorChange`:
 
 ```javascript
-function setArrive(){
-  message = 'Welcome!';
+function handleColorChange(event){
+
 }
 ```
 
-To declare a function:
+Declaring a function requires four things:
 
-1. start with the `function` keyword,
-2. then the name of your function,
-3. opening and closing parentheses,
-4. and then the code for your function between opening and closing braces
+1. The `function` keyword.
+2. The name for the new function, `handleColorChange`.
+3. The optional parameter list in a pair of parentheses, `(event)`  
+4. The body of the function surrounded by opening and closing braces, `{` `}`
 
+<!-- This lets javascript know we are declaring a new function. -->
+<!-- Same naming rules apply as for variables. -->
+<!-- The list is optional, the parentheses are not. -->
+<!-- This can be empty, have multiple items separated by commas, or a single item. -->
 
-
-<!--
- without explaining them, so let's do that now.
-
-
-We use functions for useful for a few different things.
-
-
-4. functions used in Javascript to attach behaviour to events, like clicking on buttons.
-
-We've actually already used functions multiple times so far.
-
-We've declared three functions: `setArrive`, `setLeave`, and `sayStuff`, and we've attached them to `onclick` events.
-
-We've also used functions that we didn't write, specifically `getElementById`.
-
-However there are two features of functions, **arguments** and **return values** that we haven't used in our functions yet.
-
-Lets update our program to address us by name, and to be a little more flexible. -->
-
-
-Let's review our program:
+`handleColorChange` doesn't do anything yet, but let's assign it to the `onchange` event of each of our colour inputs.  
 
 ```javascript
-var message = "I don't know where you are!";
-
-function setArrive(){
-  message = 'Welcome!';
-}
-
-function setLeave(){
-  message = 'Farewell my friend!';
-}
-
-function sayStuff(){
-  document.getElementById('displayBox').innerText = message;
-}
-
-document.getElementById('sayButton').onclick = sayStuff;
-document.getElementById('arriveButton').onclick = setArrive;
-document.getElementById('leaveButton').onclick = setLeave;
+document.getElementById('bgColorInput').onchange = handleColorChange;
+document.getElementById('row1ColorInput').onchange = handleColorChange;
+document.getElementById('row2ColorInput').onchange = handleColorChange;
 ```
 
 
+## Parameters and Arguments
 
+**Arguments** are a way of sending values into a function from the code that invokes it.  This is usually called **passing arguments**.
 
+**Parameters** are how you map those values into variables that you use in your function.
 
-"Group sets of instructions together so they can be use like a single instruction"
+In the declaration of `handleColorChange` we defined one parameter, called `event`.  
 
-Functions allow us to take a series of instructions from our program, give them a name, and then perform those steps
+Functions that are attached to events are invoked by the browser when the event happens.  When this happens the browser will always pass an argument to the function.  This argument contains all the data about the event.  This happens behind the scenes.
 
-As we said earlier, think of your program as a todo list for the computer.  
-However because we have to tell the computer every single step, these lists can get very long and often end up repeating multiple steps many times.
+So what's in `event`?  Let's put a temporary `console.log` statement into `handleColorChange` to find out.
 
-Functions let us take one or more instructions from our program, separate them from the main program and assign them a name.  
-Then every time we want to perform those steps in our program well tell it to use that function.
+Update `handleColorChange` like this:
 
+```javascript
+function handleColorChange(event){
+  console.log(event);
+}
+```
 
----
+Refresh the page, open the console and click on one of the colour inputs and try to change the colour.  
 
-Functions are how we break up our program into smaller pieces that we can then reuse.
+The console will display something like this:
 
-If we need our programs to repeat the same tasks in multiple places, functions let us do that without having to repeat our code multiple times.
+[INSERT SCREENSHOT]
 
-By having our programs made of smaller pieces that are reused, it's easier to make changes in the future and fix bugs.
+This is our event data.  You should be able to click the little triangle and expand it to see all the details.  
 
-Javascript also uses functions to assign behaviour to different events in the browser like clicking on specific elements.
-Which is what we've been doing so far with our three functions, `setArrive`, `setLeave`, and `sayStuff`.  
+There is is information about the type of event it was, but the interesting thing for us is the `target` property.  `target` is another object which represents the element which was the source of the event.  It is from this that we can find out what the new colour selection is, and anything else we want to know.
 
-Let's revise our application so it also displays the appropriate message when you click the `Arrive` and `Leave` buttons.
+So lets do that, lets change that log statement to show instead just the details we are interested in.
 
+```javascript
+function handleColorChange(event){
+  console.log(event.target.name, event.target.value);
+}
+```
 
+Ok so now `handleColorChange` has the the information it needs: the input name and the new colour code.  But we aren't going to update the colours here, we are going to create a new function to do that, and invoke it from here instead.
 
-the various different steps of our program.
+So let's quickly declare that function with an empty body:
 
-To use the todo list metaphor, functions are like little todo lists.
+```javascript
+function setColor(color, element){
 
-Instead of repeating a specific set of steps the time you put those steps into a function and can simply add a step that says "do the steps in this specific function".
+}
+```
 
-In Javascript, functions are also how we tell the browser what steps to carry out when different events happen, like clicking on a button.
-We've already been doing that.
+Notice how it has two parameters, `color` and `element` ?
+
+Ok so how do we invoke it from `handleColorChange`?
+
+## Invoking Functions
+
+Invoking a function is easy, you just put the name of the function followed by parentheses.  If you want to pass arguments to the function you put those inside the parentheses.
+
+So lets update `handleColorChange` so it invokes `setColor`, and `setColor` so it just logs it's parameters.
+
+```Javascript
+function setColor(color, elementId){
+  console.log(color, elementId);
+}
+
+function handleColorChange(event){
+  setColor(event.target.value, event.target.name);
+}
+```
+
+See how we are passing values from one function to the next.
+
+Anyway, still not really useful.  Let's have `handleColorChange` make some decisions:
+
+```javascript
+function colorChange(event){
+  if(event.target.name === 'background'){
+    setColor(event.target.value);
+  } else {
+    setColor(event.target.value, event.target.name);
+  }
+}
+```
+
+So now if when you try to change the background colour, `setColor` only gets invoked with one parameter.  So what happens to the second one?
+
+Try it out & check the log to see.
+
+If fewer arguments are passed than parameters are declared, then the remaining parameters contain the special value `undefined`, just like uninitialised variables.
+
+And we are going to take advantage of this in `setColor` because setting the page colour is going to be a little different to the div colours.
+
+Let's update `setColor`:
+
+```javascript
+function setColor(color, elementId){
+  if(elementId === undefined){
+    document.bgColor = color;
+  } else {
+    document.getElementById(elementId).style.backgroundColor = color;
+  }
+}
+```
+
+So now if `elementId` is `undefined` it means update the background colour with the value of `color`.  Otherwise get the element with the passed id and set its background colour.
+
+Check it out in your browser.
+
+## Return Values
+
+Functions have one more feature we haven't explicitly used yet, **return values**.
+
+Return values are a way that functions can send data back to the code that invoked it.  Return values are sometimes called a function's result.
+
+This is done in the function with the `return` keyword and a value.
+
+To see this in action, lets make a function that we pass our `elementId` & `color` to and it returns a string describing the change:
+
+```javascript
+function getMessage(color, elementId){
+  if(elementId === undefined){
+    return 'The background was updated to be colour '+color;
+  }
+  return elementId + ' was updated to be colour '+color;
+}
+```
+
+When the function encounters the `return` keyword, the function stops running immediately and control passes back to the code that invoked it with the value.  
+
+Now let's invoke it from `setColor` and just log the result.  Add this line to the end of `setColor`:
+
+```Javascript
+console.log(getMessage(color, elementId));
+```
+
+Save it and test it in the browser.  See how the return value from `getMessage` is passed back to `console.log`
+
+[INSERT SCREENSHOT]
+
+The returned value is substituted in the place of the function call just like a resolved expression.
+
+Let's do something more interesting with it now.  Replace the console.log line with the following:
+
+```javascript
+document.getElementById('message').innerText = getMessage(color, elementId);
+```
+
+Now when you change colours the appropriate message should be displayed.
+
+[INSERT SCREENSHOT]
+
+You could move that line to `handleColorChange` instead of it being in `setColor`, but you would have to make a few small changes.
+What do you think those changes would have to be?  Give it a try.
