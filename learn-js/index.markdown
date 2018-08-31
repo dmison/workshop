@@ -1,3 +1,6 @@
+![NodeGirls](assets/logo.png)
+
+
 Welcome to Javascript.
 
 We are going to assume the following about you:

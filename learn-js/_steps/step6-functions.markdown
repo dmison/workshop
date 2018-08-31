@@ -1,20 +1,12 @@
 ---
 layout: step
-number: 4
+number: 6
 title: Functions
-permalink: step4/
-requirements:
-  - variables
-  - values, expressions, Operators
-  - conditionals
-
-# keywords:
-#  - term: term
-#    define: A definition.
-
+permalink: step6/
 ---
 
-Functions are a way of taking the big todo list of our program and breaking it up into a series of smaller ones.  It's a little bit like writing lots of tiny program inside of your program (we heard you like programs so we put programs in your program).
+
+Functions are a way of taking the big todo list of our program and breaking it up into a series of smaller ones.  It's a little bit like writing lots of little program inside of your program (we heard you like programs so we put programs in your program).
 
 We've been using functions so far to assign behaviour to events, specifically the `onclick` events of our buttons, but that isn't the only place you can use functions.  
 
@@ -54,11 +46,9 @@ Create a new file with the following HTML.
     <div id="row1" style="width:100%;height:100px"></div>
     <div id="row2" style="width:100%;height:100px"></div>
   </body>
-
   <script>
 
   </script>
-
 </html>
 ```
 
@@ -92,11 +82,6 @@ Declaring a function requires four things:
 3. The optional parameter list in a pair of parentheses, `(event)`  
 4. The body of the function surrounded by opening and closing braces, `{` `}`
 
-<!-- This lets javascript know we are declaring a new function. -->
-<!-- Same naming rules apply as for variables. -->
-<!-- The list is optional, the parentheses are not. -->
-<!-- This can be empty, have multiple items separated by commas, or a single item. -->
-
 `handleColorChange` doesn't do anything yet, but let's assign it to the `onchange` event of each of our colour inputs.  
 
 ```javascript
@@ -104,7 +89,6 @@ document.getElementById('bgColorInput').onchange = handleColorChange;
 document.getElementById('row1ColorInput').onchange = handleColorChange;
 document.getElementById('row2ColorInput').onchange = handleColorChange;
 ```
-
 
 ## Parameters and Arguments
 
@@ -134,7 +118,9 @@ The console will display something like this:
 
 This is our event data.  You should be able to click the little triangle and expand it to see all the details.  
 
-There is is information about the type of event it was, but the interesting thing for us is the `target` property.  `target` is another object which represents the element which was the source of the event.  It is from this that we can find out what the new colour selection is, and anything else we want to know.
+The `event` object contains a lot of properties with details about the event, but the interesting thing for us is the `target` property.
+`target` is another object which represents the element which was the source of the event.  
+It is from this that we can find out what the new colour selection is, and anything else we want to know.
 
 So lets do that, lets change that log statement to show instead just the details we are interested in.
 
@@ -239,7 +225,7 @@ Now let's invoke it from `setColor` and just log the result.  Add this line to t
 console.log(getMessage(color, elementId));
 ```
 
-Save it and test it in the browser.  See how the return value from `getMessage` is passed back to `console.log`
+Save it and test it in the browser.  See how the return value from `getMessage` is “passed back” to `console.log`
 
 [INSERT SCREENSHOT]
 
