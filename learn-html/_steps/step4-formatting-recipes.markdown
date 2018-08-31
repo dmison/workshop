@@ -25,7 +25,7 @@ Refer to our completed `index.html` for hints.
     <title>Traditional Cupcakes</title>
   </head>
   <body>
-    <a href="index.html">Home</a>
+    <a href="index.html">HOME</a>
     <h1>Traditional cupcakes</h1>
     <p>
       Traditional cupcakes are always a crowd-pleaser.
@@ -47,7 +47,7 @@ Refer to our completed `index.html` for hints.
 
     <h2>Method:</h2>
     <ol>
-      <li>Preheat oven to 200C or 180C fan-forced.</li>
+      <li>Preheat oven to 200°C or 180°C fan-forced.</li>
       <li>Grease a 12 x 1/3-cup capacity muffin pan. Alternatively, line holes with paper cases.</li>
       <li>Combine flour and caster sugar in a bowl. Make a well in the centre.</li>
       <li>Add milk, butter, eggs and vanilla to flour mixture. Using a large metal spoon, stir gently to combine.</li>
@@ -83,11 +83,8 @@ Now do `muffins.html` as well.  Use the same directions plus the following:
   </head>
   <body>
     <a href="index.html">Home</a>
-
     <h1>Muffins</h1>
-
     <p>This recipe makes 12 plain muffins.</p>
-
     <p>Refer to directions at the bottom for how to modify the recipe for different types of muffins.</p>
 
     <h2>Ingredients:</h2>
@@ -115,9 +112,9 @@ Now do `muffins.html` as well.  Use the same directions plus the following:
     <h2>Variations:</h2>
     <h3>Blueberry Muffins:</h3>
     <ul>
-     <li>Use 1/2 cup sugar.</li>
-     <li>Reserve 1/4 cup of the flour, sprinkle it over 1 cup blueberries, and stir them into the batter last.</li>
-   </ul>
+      <li>Use 1/2 cup sugar.</li>
+      <li>Reserve 1/4 cup of the flour, sprinkle it over 1 cup blueberries, and stir them into the batter last.</li>
+    </ul>
     <h3>Pecan Muffins:</h3>
     <ul>
      <li>Use 1/4 cup sugar.</li>
@@ -126,16 +123,16 @@ Now do `muffins.html` as well.  Use the same directions plus the following:
    </ul>
     <h3>Whole-Wheat Muffins:</h3>
     <ul>
-     <li>Use 3/4 cup whole-wheat flour and 1 cup white flour.</li>
-   </ul>
+      <li>Use 3/4 cup whole-wheat flour and 1 cup white flour.</li>
+    </ul>
     <h3>Date or Raisin Muffins:</h3>
     <ul>
-     <li>Add 1/2 cup chopped pitted dates or 1/3 cup raisins to the batter.</li>
-   </ul>
+      <li>Add 1/2 cup chopped pitted dates or 1/3 cup raisins to the batter.</li>
+    </ul>
     <h3>Bacon Muffins:</h3>
     <ul>
      <li>Add 3 strips bacon, fried crisp and crumbled, to the batter.</li>
-   </ul>
+    </ul>
   </body>
 </html>
 ```
