@@ -3,12 +3,8 @@ layout: step
 number: 1
 title: Setting Up
 permalink: step1/
-
-# keywords:
-#  - term: package.json
-#    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
-
 ---
+
 
 At lot of beginning workshops for Javascript start you with the very basics and only start doing the fun stuff (like using the DOM) at the end.
 
@@ -83,29 +79,3 @@ Almost everything that happens in the browser triggers an event. Think of an eve
 When we write Javascript, we tell the browser what instructions (functions) to run when different events happen.
 
 So now we have something to work with lets dig into the basics of Javascript.
-
-<!-- ## Script placement
-
-You can actually put script tags anywhere in a page.  And you can use more than one.
-
-Does it matter where the `<script>` tags go?
-
-Remember how I said that the browser pauses updating page elements when it encounters a `<script>`?
-
-In our page we have the `<script>` after `<body>`.  What do you think will happen if you were to put it before `<body>`?
-
-Try it.  
-
-The page will load but the button does nothing?  Why?
-
-If you open up your browser developer tools and go to the console tab you will see an error something like this:
-
-```
-TypeError: document.getElementById(...) is null
-```
-
-This error occurs when the page loads.  Refresh the page to see.
-
-This line is the one that tried to assign our `doStuff` function to the `click` event of the `actionButton` button.  But because the `script` tag was before the button in the page, we browser doesn't know about the button yet and so it can't find it.
-
-The earlier line in the `doStuff` function that looks up `displayBox` doesn't produce an error because that line hasn't actually run yet. All we are doing there is creating the function, creating code that will run later. But that code will never run because although the function is created ok, it the line that assigned it to the click event didn't run successfully. -->
