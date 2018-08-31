@@ -1,14 +1,11 @@
 ---
 layout: step
-number: 5
+number: 4
 title: Conditions
-permalink: step5/
-
-# keywords:
-#  - term: package.json
-#    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
+permalink: step4/
 
 ---
+
 
 We don't always want our programs to perform the exact same series of steps every time.
 Often we want different actions to occur based on user input or other information.
