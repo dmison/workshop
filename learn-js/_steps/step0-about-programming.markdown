@@ -5,28 +5,7 @@ part: 0
 title: About Programming
 permalink: step0/
 
-keywords:
-#  - term: package.json
-#    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
 
-  - term: Document Object Model (DOM)
-    define:
-  - term: Application Programming Interface (API)
-    define: some definition
-  - term: Standard Library
-    define: some definition
-  - term: Web API
-    define: some definition
-  - term: variables
-    define: some definition
-  - term: operations
-    define: some definition
-  - term: conditionals
-    define: some definition
-  - term: loops
-    define: some definition
-  - term: functions
-    define: some definition
 ---
 
 So before we jump in lets have a quick chat about what programming actually is.
@@ -36,8 +15,6 @@ We expect you already know some HTML & CSS but we don't really consider those th
 So what *is* programming?
 
 ## Todo lists for computers
-
-> The question of whether a computer can think is no more interesting than the question of whether a submarine can swim. [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 
 You can think of programming as writing a todo list for a computer.  
 
@@ -67,11 +44,13 @@ That's actually kind of it.
 
 But what about displaying stuff on the screen?  Or reading and writing to files?  Or getting input from the user?  Or making a network request?  How do we do those things?
 
-You do those things using functions that are included with the language.  Most languages include a lot of functions that perform all sorts of tasks.  This collection of functions is sometimes referred to as a "standard library".  
+You do those things using functions that are included with the language.  
+
+Most languages include a lot of functions that perform all sorts of tasks.  Under the hood, these functions still just do the same kind of stuff but with more direct access to the internal details.  Javascript hides many of these kinds of details away for security reasons.  
 
 ## Programming in the Browser
 
-Web browsers provide a "standard library" of functions that we use to do all sorts of interesting stuff.  
+Web browsers provide a "standard library" of functions that we use to do all sorts of interesting stuff in Javascript.  
 
 There are a lot of these, but the ones we are going to be using today are referred to as the Document Object Model API or DOM API. API stands for Application Programming Interface, which is just a fancy way of saying "some functions that let you interact with a program".
 
