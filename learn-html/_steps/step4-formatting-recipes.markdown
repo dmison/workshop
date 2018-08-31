@@ -47,7 +47,7 @@ Refer to our completed `index.html` for hints.
 
     <h2>Method:</h2>
     <ol>
-      <li>Preheat oven to 200C or 180C fan-forced.</li>
+      <li>Preheat oven to 200°C or 180°C fan-forced.</li>
       <li>Grease a 12 x 1/3-cup capacity muffin pan. Alternatively, line holes with paper cases.</li>
       <li>Combine flour and caster sugar in a bowl. Make a well in the centre.</li>
       <li>Add milk, butter, eggs and vanilla to flour mixture. Using a large metal spoon, stir gently to combine.</li>
