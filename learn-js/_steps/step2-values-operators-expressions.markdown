@@ -4,11 +4,8 @@ number: 2
 title: Values, types, operators, and expressions
 permalink: step2/
 
-# keywords:
-#  - term: package.json
-#    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
-
 ---
+
 
 Most of the code you write will be manipulating or examining data of some sort. That data might come from a file, or from a 3rd party service, or from the user selecting something on a page or typing into a text box.  
 
@@ -48,11 +45,13 @@ When you have your Dev Tools open, go to the Console tab.
 
 [SCREENSHOT]
 
-So lets just type the number `205` and press enter.  
+## Arithmetic Operations
+
+In the Javascript console, type the number `205` and press enter.  
 
 You will see it display the number `205` again.  The javascript Console **evaluates** the expression you type in and displays the result.  When you just type a single value like this, it evaluates to itself.
 
-So lets try typing `205 + 103`.
+So lets try: `205 + 103`.
 
 You'll get `308` displayed.  This expression is an operation with the `+` operator AKA the addition operator.
 
