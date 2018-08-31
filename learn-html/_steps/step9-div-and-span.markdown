@@ -142,7 +142,7 @@ Now add a `<span>` with the class of `temp` around all the temperatures in the r
 Like this:
 
 ```html
-<li>Preheat oven to <span class="temp">200C</span> or <span class="temp">180C</span> fan-forced.</li>
+<li>Preheat oven to <span class="temp">200°C</span> or <span class="temp">180°C</span> fan-forced.</li>
 ```
 
 [SCREENSHOT]
