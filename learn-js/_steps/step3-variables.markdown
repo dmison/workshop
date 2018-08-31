@@ -1,14 +1,11 @@
 ---
 layout: step
-number: 2
+number: 3
 title: Variables
-permalink: step2/
-
-# keywords:
-#  - term: package.json
-#    define: A `package.json` is the file used to store information about a Node.js project, such as its name and its dependencies. Read more [here](https://docs.npmjs.com/files/package.json).
+permalink: step3/
 
 ---
+
 So now we know the basics about values, operations and expressions.
 
 But so far we have only been able to write literal values.  We have needed to know what they will be ahead of time.  What if we don't know yet or if we expect them to change over time?  That's where variables come in.
