@@ -43,7 +43,14 @@ Safari doesn't have its Dev Tools enabled by default, you turn them on in Safari
 
 When you have your Dev Tools open, go to the Console tab.
 
-[SCREENSHOT]
+It should look something like this:
+
+![Screenshot of the developer tools view in Mozilla Firefox](../assets/dev-tools-firefox.png "Firefox Developer Tools")
+
+![Screenshot of the developer tools view in Safari](../assets/dev-tools-safari.png "Safari Developer Tools")
+
+![Screenshot of the developer tools view in Google Chrome](../assets/dev-tools-chrome.png "Google Chrome Developer Tools")
+
 
 ## Arithmetic Operations
 
@@ -94,7 +101,7 @@ document.getElementById('displayBox').innerText = 'You clicked the button!';
 
 When we surround characters with quotes characters like this, it makes a type of value that is called a **string**.  A string is just a sequence of letters, numbers and other characters which is a literal representation of them.  Imagine a string as bunting with letters, like a sign at a party.
 
-[IMAGE PARTY SIGN BUNTING]
+![Bunting is a useful metaphor for strings](../assets/strings-are-basically-bunting.jpg "Halloween bunting as a metaphor for strings")
 
 There are different kinds of values for different uses.  We refer to this as the **type** of the value.
 
@@ -108,7 +115,7 @@ This is called **concatenating**.
 
 Another example might be joining first and last names together to make a person's full name, like `'Jessica'+' '+'Anderson'`.  Notice how we actually used three strings there?  The second one is a string with just a single space.  A blank space is a character.  A string can be a single character, a word, a sentence, or a whole bunch of paragraphs.  It can be any set of characters you need to use.  A string can be empty too, `''`.
 
-What about the other operators?  What happens if you multiple or subtract strings?
+What about the other operators?  What happens if you multiply or subtract strings?
 
 Give it a try.
 
@@ -134,9 +141,7 @@ There are two simple rules for this:
 
 This is called **type conversion**.
 
-Try it out in the console:
-
-Eg.
+Try it out in the console with these:
 
  * `'50' + 5`
  * `'50' * 5`
