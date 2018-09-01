@@ -78,15 +78,16 @@ Next, our code finds the element with the element with the ID of `actionButton` 
 
 So then when you click on the button, the text changes on the page.  
 
-This is the second time that Javascript code runs: when something that happens on the page has a Javascript function attached to it.
+This is the second time that JavaScript code runs: when something that happens on the page has a JavaScript function attached to it. 
 We call those things that happen `events`.
 
 Running code in response to events is called *event-driven programming*, and that's what most JavaScript programming is.
 
-Almost everything that happens in the browser triggers an event.
-Think of an event as an announcement from Javascript that a specific thing happened.
+Almost everything that happens in the browser triggers an event. 
+Think of an event as an announcement from JavaScript that a specific thing happened. 
+
 When the page loads, when you scroll, when you click on something, all these things and many more cause the browser to create events.
 
-When we write Javascript, we tell the browser what instructions (functions) to run when different events happen.
+When we write JavaScript, we tell the browser what instructions (functions) to run when different events happen.
 
-So now we have something to work with let's dig into the basics of Javascript.
+So now we have something to work with let's dig into the basics of JavaScript.

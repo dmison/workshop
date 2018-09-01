@@ -18,7 +18,7 @@ The most common conditional is the `if` statement.
 
 Here's an example that checks if the user had supplied a first name and sets an error message if they hadn't.
 
-```Javascript
+```javascript
 if(firstName == ''){
   errorMessage = 'You must enter your first name';
 }
@@ -51,7 +51,7 @@ First add a box that we can type our name into:
 
 Now lets's update our JavaScript so our `handleLeave` and `handleArrive` functions get what we have typed into the box and include it in the message.
 
-```JavaScript
+```javascript
 function handleArrive(){
   var name = document.getElementById('nameInput').value;
   message = 'Welcome '+name+'!';
@@ -73,7 +73,7 @@ Your message will just have a blank name, which isn't great.
 
 So let's fix that by using conditionals to tell our code what to do in that case.
 
-```Javascript
+```javascript
 function handleArrive(){
   var name = document.getElementById('nameInput').value;
   if(name == ''){
@@ -167,7 +167,7 @@ Like `&&` you can chain together as many conditions as you like with `||`. It al
 
 Unlike `&&` and `||` the **NOT** operator `!` is placed in front of an expression to reverse it.
 
-```Javascript
+```javascript
 if(!agreedToTerms){
 
 }
@@ -187,13 +187,13 @@ Let's say we have a form where:
 
 The following `if` statement doesn't quite work as expected.
 
-```Javascript
+```javascript
 if (age >= 18 || parentSignedForm && agreedToTerms) {
 
 }
 ```
 
-If `age >= 18` is true, then when the `||` is encountered, Javascript thinks it doesn't have to evaluate any further.  Clearly not what we intended.
+If `age >= 18` is true, then when the `||` is encountered, JavaScript thinks it doesn't have to evaluate any further.  Clearly not what we intended.
 
 To clarify where we want the `&&` and `||` to apply we use parentheses:
 

@@ -46,11 +46,11 @@ But what about displaying stuff on the screen?  Or reading and writing to files?
 
 You do those things using functions that are included with the language.  
 
-Most languages include a lot of functions that perform all sorts of tasks.  Under the hood, these functions still just do the same kind of stuff but with more direct access to the internal details.  Javascript hides many of these kinds of details away for security reasons.  
+Most languages include a lot of functions that perform all sorts of tasks.  Under the hood, these functions still just do the same kind of stuff but with more direct access to the internal details.  JavaScript hides many of these kinds of details away for security reasons.  
 
 ## Programming in the browser
 
-Web browsers provide a "standard library" of functions that we use to do all sorts of interesting stuff in Javascript.  
+Web browsers provide a "standard library" of functions that we use to do all sorts of interesting stuff in JavaScript.  
 
 There are a lot of these, but the one we are going to be using today is referred to as the Document Object Model API or DOM API. API stands for Application Programming Interface, which is just a fancy way of saying "some functions that let you interact with an application".
 
