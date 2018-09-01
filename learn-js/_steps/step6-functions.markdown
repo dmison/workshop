@@ -150,7 +150,7 @@ Invoking a function is easy, you just put the name of the function followed by p
 
 So lets update `handleColorChange` so it invokes `setColor`, and `setColor` so it just logs it's parameters.
 
-```Javascript
+```javascript
 function setColor(color, elementId){
   console.log(color, elementId);
 }
@@ -221,7 +221,7 @@ When the function encounters the `return` keyword, the function stops running im
 
 Now let's invoke it from `setColor` and just log the result.  Add this line to the end of `setColor`:
 
-```Javascript
+```javascript
 console.log(getMessage(color, elementId));
 ```
 

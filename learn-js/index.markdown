@@ -1,7 +1,7 @@
 ![NodeGirls](assets/logo.png)
 
 
-Welcome to Javascript.
+Welcome to JavaScript.
 
 We are going to assume the following about you:
 
@@ -10,15 +10,15 @@ We are going to assume the following about you:
 
 If you aren’t familiar with those things you should start with [Introduction to HTML](LINK) first.
 
-This workshop aims to teach you the basics of Javascript within the web-browser.  This is pretty easy to get started with, and builds up some core  knowledge useful both in the browser and in learning Node.JS or any other JavaScript environment.
+This workshop aims to teach you the basics of JavaScript within the web-browser.  This is pretty easy to get started with, and builds up some core  knowledge useful both in the browser and in learning Node.JS or any other JavaScript environment.
 
 ## Why JavaScript?
 
-JavaScript is everywhere these days.  In addition to being built into the browser, Node.JS has made it possible to do server-side, desktop, and even robotics programming in Javascript as well.  
+JavaScript is everywhere these days.  In addition to being built into the browser, Node.JS has made it possible to do server-side, desktop, and even robotics programming in JavaScript as well.  
 
-So now you can write your backend services in Javascript, your website frontend  in Javascript, desktop tools, and automation as well.
+So now you can write your backend services in JavaScript, your website frontend  in JavaScript, desktop tools, and automation as well.
 
-The future is obviously written in Javascript, so the better question is: Why not Javascript?
+The future is obviously written in JavaScript, so the better question is: Why not JavaScript?
 
 ## What we are going to do
 

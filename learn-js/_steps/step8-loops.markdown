@@ -121,7 +121,7 @@ document.getElementById('goButton').onclick = showMessage;
 
 Unfortunately it doesn't work. Why?
 
-The page can only be actually redrawn when Javascript isn't running.  It doesn't matter how many times you tell Javascript to do it, it just relays those instructions to the browser and the browser has to wait until Javascript has finished until it can actually redraw the page.  
+The page can only be actually redrawn when JavaScript isn't running.  It doesn't matter how many times you tell JavaScript to do it, it just relays those instructions to the browser and the browser has to wait until JavaScript has finished until it can actually redraw the page.  
 
 It's a little more complicated than that, but the if you have code that takes a long time to run then the page cannot update, nor can anything else happen.  So try to avoid long loops. :wink:
 

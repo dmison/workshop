@@ -47,7 +47,7 @@ When you have your Dev Tools open, go to the Console tab.
 
 ## Arithmetic Operations
 
-In the Javascript console, type the number `205` and press enter.  
+In the JavaScript console, type the number `205` and press enter.  
 
 You will see it display the number `205` again.  The javascript Console **evaluates** the expression you type in and displays the result.  When you just type a single value like this, it evaluates to itself.
 
