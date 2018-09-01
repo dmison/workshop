@@ -37,7 +37,7 @@ Update `index.html` so it has :
 </html>
 ```
 
-Save it, refresh our browser window & it does look the same, but if you look closely you'll see that the browser tab now reads "Traditional Cupcakes" instead of the filename.
+Save it, refresh our browser window & it does look the same, but if you look closely you'll see that the browser tab now reads "Tiny Cakes!" instead of the filename.
 
 [SCREENSHOT]
 
