@@ -14,9 +14,35 @@ The best thing about making web pages is that you don't really need very much to
 
 ## Text Editors, source code & plain text
 
-about plain text as the simplest format for text (hence plain)
+A text editor is a program that lets you write and edit **plain text**.
 
-features for programming: syntax highlighting, file views, completion suggestion, snippets
+Most writing programs that you're used to don't use plain text.
+In Microsoft Word, macOS Pages, and Google Docs, even "unformatted" text has some hidden information behind it.
+
+If you open a `.doc` file in a plain text editor, you'll see a lot of code you didn't know was there.
+This is called **source code**.
+
+Microsoft Word uses the rules in that code to understand how to display your document for you, just like a browser uses the rules of HTML and CSS to display your web page.
+
+But when you're writing code, you want to write that code exactly, with no hidden stuff behind it.
+That's why we use text editors.
+
+There are very basic text editors like Microsoft Notepad or macOS TextEdit.
+These are just fine for editing all kinds of plain text files.
+
+But we can also use text editors that have special features to make working with code easier.
+Some useful features include:
+
+* **File view** - This lets you see all the files in your project as part of your text editor, so you can find and edit the files you need easily.
+* **Syntax highlighting** - This colours different parts of code differently according to its purpose. They also usually colour things red when your code stops making sense.
+* **Auto-complete** - Just like on your phone, some text editors can guess what you're trying to type and fill in the rest for you. If you have long keywords and file names, this can be really handy.
+* **Snippets** - Snippets let you automatically do something with a file, like automatically insert the right HTML structure for a web page when you hit a certain key combination. This can save a lot of time.
+
+## Get a text editor
+
+The text editor we recommend for this workshop is **Atom**.
+
+You can download it here: https://atom.io
 
 ## Setup
 
